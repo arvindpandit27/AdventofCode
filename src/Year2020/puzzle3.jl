@@ -1,7 +1,4 @@
-
-
-
-
+#try
 lines = open("inputFiles/Year2020/puzzle3.txt", read=true, write =true) do io
     ids_array = readlines(io)
 end
