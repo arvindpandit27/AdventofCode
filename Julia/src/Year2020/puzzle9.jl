@@ -40,5 +40,37 @@ function movelist(numbers)
 return -1
 end
 
+function findseries(numbers, THEnumber)
+    
+    
+    series = []
+    index = 1
+    seriesLength = 2
+    seriesFound = false
+   
+ 
+    while seriesFound == false
+
+        temp = numbers[index:(index+seriesLength-1)]
+        series = temp
+        #println(seriesLength)
+        if sum(series) == THEnumber
+            seriesFound = true;
+        end
+        index = index + 1
+
+        if index == length(numbers)-seriesLength 
+            seriesLength = seriesLength + 1
+            index = 1
+        end
+
+
+
+    end
+    return series
+end
 
 a = movelist(numbers)
+out = findseries(numbers, 1504371145)
+sanitycheck = (sum(out) == a)
+answerforpart2 = findmax(out)[1] + findmin(out)[1]
