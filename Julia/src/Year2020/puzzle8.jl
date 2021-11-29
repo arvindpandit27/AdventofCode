@@ -69,8 +69,5 @@ function buggyStatemachine(command, numbers, output)
     end
 end
 
-
-
-
 output,line = statemachine(dataArray, valArray, 0)
 output2 = buggyStatemachine(dataArray, valArray, 0)

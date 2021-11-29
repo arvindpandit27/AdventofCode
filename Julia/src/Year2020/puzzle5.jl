@@ -14,7 +14,6 @@ end
 
 modifiedInput = modify(lines)
 
-
 function findRowCol!(modifiedInput, row, col)
 for i in 1:length(modifiedInput)
 row[i] = parse.(Int, modifiedInput[i][1:end-3], base = 2)
@@ -24,11 +23,7 @@ return row, col
 end
 
 Rows, Cols = findRowCol!(modifiedInput,zeros(length(modifiedInput)),zeros(length(modifiedInput)))
-
-
 maxID = maximum(Rows*8 .+ Cols)
-
-
 AllIDs = sort(Rows*8 .+ Cols)
 
 for j in 1:length(AllIDs)-1

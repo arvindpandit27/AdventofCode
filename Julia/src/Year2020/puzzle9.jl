@@ -6,8 +6,6 @@ end
 
 numbers = parse.(Int, lines)
 
-
-
 function puzzle1_parta_2020(list, NumberOfInterest)
 
     for i in 1:length(list)
@@ -19,7 +17,6 @@ function puzzle1_parta_2020(list, NumberOfInterest)
     end
     return true
 end
-
 
 function movelist(numbers)
     faultyflag = false
@@ -42,13 +39,11 @@ end
 
 function findseries(numbers, THEnumber)
     
-    
     series = []
     index = 1
     seriesLength = 2
     seriesFound = false
    
- 
     while seriesFound == false
 
         temp = numbers[index:(index+seriesLength-1)]
@@ -63,9 +58,6 @@ function findseries(numbers, THEnumber)
             seriesLength = seriesLength + 1
             index = 1
         end
-
-
-
     end
     return series
 end

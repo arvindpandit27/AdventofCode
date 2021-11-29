@@ -1,11 +1,8 @@
 using DataFrames
 
-
 lines = open("inputFiles/Year2020/puzzle4.txt", read=true, write =true) do io
     ids_array = readlines(io)
 end
-
-
 
 function doparsing(val,l, repeatedlines)
     
@@ -34,13 +31,6 @@ end
 
 
 newInput = doparsing(1,lines, true)
-
-
-#switch_path = "../../GlobalStateMachine/src/state_switch_conditions.h" |> realpath
-#io = open(switch_path, "r")
-
-#initial_states_switch = unique([x[2] for x in funs])
-
 validpassports_eyr = contains.(newInput, "eyr") 
 validpassports_ecl = contains.(newInput, "ecl") 
 validpassports_hcl = contains.(newInput, "hcl") 
@@ -50,22 +40,10 @@ validpassports_byr = contains.(newInput, "byr")
 validpassports_hgt = contains.(newInput, "hgt")
 validpassports_iyr = contains.(newInput, "iyr") 
 
-
 vp = (validpassports_eyr .& validpassports_ecl .& validpassports_hcl .& validpassports_byr .&validpassports_hgt .& validpassports_iyr) .& (validpassports_pid)
 
-
-
 Present = newInput[vp]
-# function_regex = r"eyr:(.+)"
 
-# s = split(newInput[1], " " )
-
-# funs = eachmatch.(function_regex, s) |> collect
-
-# for i in 1:length(funs)
-# un = unique([x[1] for x in funs[i]])
-# break
-# end
 function checkvalid(validP)
 for i in 1:length(Present)
     validflag = false

@@ -1,10 +1,7 @@
-using CSV, DataFrames
+using CSV, DataFrames 
 
 input = CSV.read("E:\\rbionics\\EXO\\Data\\RX_testfolder\\puzzle.csv", DataFrame)
-
-
 inputarr = input[:,:Data]
-
 
 function puzzle1_parta_2020(list)
 
@@ -15,7 +12,6 @@ function puzzle1_parta_2020(list)
             end
         end
     end
-
 end
 
 function puzzle1_partb_2020(list)

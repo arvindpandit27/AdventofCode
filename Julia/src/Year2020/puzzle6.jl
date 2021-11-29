@@ -1,4 +1,4 @@
-using DataFrames
+using DataFrames 
 using DataStructures
 
 lines = open("../inputFiles/Year2020/puzzle6.txt", read=true, write =true) do io
@@ -32,7 +32,6 @@ end
 return l
 end
     
-
 function doparsingWithSpace(val,l, repeatedlines)
     
 while(val+1 <= length(l))

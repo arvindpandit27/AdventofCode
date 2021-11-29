@@ -27,13 +27,10 @@ end
 
 times = countme(i, FilterInput)
 
-
-
 rename!(FilterInput, :MinNumber => :Pos1)
 rename!(FilterInput, :MaxNumber => :Pos2)
 
 j = 0
-
 function positionbasedcounter(counter, FilterInput)
     for i in 1:nrow(FilterInput)
     switch = false 

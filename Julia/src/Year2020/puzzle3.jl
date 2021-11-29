@@ -13,7 +13,6 @@ end
 
 modifiedInput = modify(lines)
 
-
 function makeMatrix(modifiedInput)
     MatrixInput = Matrix{Int64}(undef, length(modifiedInput),  length(split(modifiedInput[1])))
 for i in 1:length(modifiedInput)
