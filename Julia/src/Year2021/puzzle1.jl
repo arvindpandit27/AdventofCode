@@ -10,7 +10,7 @@ answer_a = sum(diff(input) .> 0)
 
 function slidingWindow(input)
     modified = Array{Int64}(undef,length(input)-2)
-for i in 1:length(input)-2 
+for i in 1:length(modified)
     modified[i] = input[i] + input[i+1] + input[i+2]
 end
 return modified

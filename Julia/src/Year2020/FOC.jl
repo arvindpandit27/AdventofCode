@@ -1,5 +1,6 @@
 using Plots
-
+#plotly()
+gr()
 #Vq = 1.0
 #Vd = 0.0
 #encReadings =  range(0, 65535, length=10000000)
@@ -91,24 +92,24 @@ plot!(h5, (theta, Iq), label = "Iq")
 plot(h1, h2, h3, h4, h5, layout = (5,1))
 
 
-N = 8
-KV1 = 1/N 
-samplingFreq = 30000
+# N = 8
+# KV1 = 1/N 
+# samplingFreq = 30000
 
-den = (1/KV1) - 1
-tau = samplingFreq/(den)
-fs = 1/(2*pi*tau)
-
-
-maxMotorSpeed = 500 ##radps
-maxMotorSpeedInfreq = maxMotorSpeed/(2*pi)
-polpairs = 14
-electricalangleFreq = maxMotorSpeedInfreq*polpairs 
-phaseCurrentHarmonics= [1,3,5]
-freq = findmax(electricalangleChange*phaseCurrentHarmonics)[1]
-sampling1  = 2*freq
+# den = (1/KV1) - 1
+# tau = samplingFreq/(den)
+# fs = 1/(2*pi*tau)
 
 
-fs = 
-normalized = 0.444/(sqrt(15))
-sampling = cutOff/normalized
+# maxMotorSpeed = 500 ##radps
+# maxMotorSpeedInfreq = maxMotorSpeed/(2*pi)
+# polpairs = 14
+# electricalangleFreq = maxMotorSpeedInfreq*polpairs 
+# phaseCurrentHarmonics= [1,3,5]
+# freq = findmax(electricalangleChange*phaseCurrentHarmonics)[1]
+# sampling1  = 2*freq
+
+
+# fs = 
+# normalized = 0.444/(sqrt(15))
+# sampling = cutOff/normalized
